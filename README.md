@@ -6,37 +6,31 @@
 2. นักศึกษาต้องทำการเขียนโค้ดโปรแกรมที่ไฟล์ `student_program.cpp`
    
 ## โจทย์
-เขียนคำสั่งในการสร้างและเรียกใช้ฟังก์ชัน GetMatrix() เพื่อรับจำนวนแถว คอลัมน์ และค่าของแต่ละสมาชิกในเมทริกซ์จากคีย์บอร์ดตามโปรโตไทป์ต่อไปนี้
+จงเขียนรายละเอียดของ Prototype ต่อไปนี้
+- ฟังก์ชัน reverse() โดยในฟังก์ชันนี้จะต้องทำการรับค่าภายในฟังก์ชัน จากนั้นทำการแสดงข้อความแบบกลับด้าน โดยให้แสดงทั้งในฟังก์ชันนี้ และ ภายในฟังก์ชันการทำงานหลักด้วย (ตามหลักของ Pass by reference ควรจะได้ค่าเดียวกัน)
 
 ## FIX CODE
 ```c++
 #include <stdio.h>
 
-void GetMatrix( int value[], int *row, int *col ) ;
+char* reverse( char str1[]) ;
 
 int main() {
-    int *data, m, n ;
-    GetMatrix( &data, &m, &n ) ;
-    for( int i = 0 ; i < m ; i++ ) {
-      for( int j = 0 ; j < n ; j++ ) {
-          printf( "%d ", data[i][j] ) ;
-      }
-      printf( "\n" ) ;
-    }
-    return 0 ;
+    char text[ 50 ] ;
+    char *output ;
+    output = reverse( text ) ;
+    printf( "MAIN : %s\n", output ) ;
 }//end function
+
 ```
 
 ## TEST CASE
 ### Input
 ```bash
-Enter the number of rows: 2
-Enter the number of columns: 3
-Enter the matrix elements: 1 2 3 4 5 6
+Enter str1 : I Love You
 ```
 ### Output
 ```bash
-Matrix (2x3):
-1 2 3
-4 5 6
+FUNC : uoY evoL I
+MAIN : uoY evoL I
 ```
