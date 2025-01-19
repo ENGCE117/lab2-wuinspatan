@@ -1,0 +1,42 @@
+## ข้อบังคับ
+1. ต้องกรอกรายละเอียดของตนเองในไฟล์ `student_info.txt` โดยมีข้อมูลสำคัญที่ต้องกรอกคือ
+   - รหัสนักศึกษา เช่น 678888888-8
+   - รหัสวิชา เช่น ENGCE117
+   - เทอมที่เรียน เช่น 2/2567
+2. นักศึกษาต้องทำการเขียนโค้ดโปรแกรมที่ไฟล์ `student_program.cpp`
+   
+## โจทย์
+เขียนคำสั่งในการสร้างและเรียกใช้ฟังก์ชัน GetMatrix() เพื่อรับจำนวนแถว คอลัมน์ และค่าของแต่ละสมาชิกในเมทริกซ์จากคีย์บอร์ดตามโปรโตไทป์ต่อไปนี้
+
+## FIX CODE
+```c++
+#include <stdio.h>
+
+void GetMatrix( int value[], int *row, int *col ) ;
+
+int main() {
+    int *data, m, n ;
+    GetMatrix( &data, &m, &n ) ;
+    for( int i = 0 ; i < m ; i++ ) {
+      for( int j = 0 ; j < n ; j++ ) {
+          printf( "%d ", data[i][j] ) ;
+      }
+      printf( "\n" ) ;
+    }
+    return 0 ;
+}//end function
+```
+
+## TEST CASE
+### Input
+```bash
+Enter the number of rows: 2
+Enter the number of columns: 3
+Enter the matrix elements: 1 2 3 4 5 6
+```
+### Output
+```bash
+Matrix (2x3):
+1 2 3
+4 5 6
+```
